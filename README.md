@@ -26,10 +26,13 @@ Get-GlobalAddressList -ExchHostname mail.xxx.cn -UserName xxx.cn\lu.sc -Password
 ```
 #运行所有检查并返回所有输出
 Seatbelt.exe -group=all -full
+
 #运行检查以挖掘有关系统的有趣数据。
 Seatbelt.exe -group=system
+
 #运行检查，挖掘有关当前登录用户（如果未提升）或所有用户（如果提升）的有趣数据。
 Seatbelt.exe -group=user
+
 #运行所有杂项检查。
 Seatbelt.exe -group=misc
 ```
