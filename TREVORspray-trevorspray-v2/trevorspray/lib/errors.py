@@ -1,0 +1,2 @@
+class TREVORSprayError(Exception):
+    pass
