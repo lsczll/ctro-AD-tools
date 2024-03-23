@@ -36,3 +36,44 @@ Seatbelt.exe -group=user
 #运行所有杂项检查。
 Seatbelt.exe -group=misc
 ```
+# 4.SharPersist
+* 项目地址：https://github.com/mandiant/SharPersist
+* 工具用处：Windows 持久性工具包
+* 简单用法：
+```
+#通过计划任务
+SharPersist.exe -t schtask -c "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -a "-nop -w hidden -enc payload" -n "Updater" -m add -o hourly
+
+#通过启动文件夹
+SharPersist.exe -t startupfolder -c "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe" -a "-nop -w hidden -enc payload" -f "UserEnvSetup" -m add
+
+#通过注册表
+SharPersist.exe -t reg -c "C:\ProgramData\backdoor.exe" -a "/q /n" -k "hkcurun" -v "Updater" -m add
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
