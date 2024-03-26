@@ -98,6 +98,12 @@ SharpUp.exe audit ModifiableServiceBinaries
 * 项目地址：https://github.com/cobalt-strike/ElevateKit
 * 项目用处：cs 提权工具包
 
+---
+# 9.cs4.7
+* 无需解释
+
+---
+
 
 
 
