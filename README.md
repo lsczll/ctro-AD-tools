@@ -127,11 +127,12 @@ Register-MaliciousWmiEvent -EventName WmiBackdoor -PermanentCommand "C:\Users\ls
 #清除恶意 WMI 事件（名称为WmiBackdoor）
 Get-WmiEvent -Name WmiBackdoor | Remove-WmiObject
 ```
+---
 
 # 11.mimikatz
 * 项目地址：https://github.com/gentilkiwi/mimikatz
 * 项目用处：无需解释
-
+---
 # 12.Rubeus
 * 项目地址：https://github.com/GhostPack/Rubeus
 * 项目用处：用于 Windows Kerberos 黄金票据攻击、Silver Ticket 攻击、票据转储和其他相关攻击的开源工具
@@ -145,6 +146,10 @@ Rubeus.exe dump /luid:0x7049f /service:krbtgt
 #如果没有/luid:0x7049f /service:krbtgt，Rubeus 将提取所有可能的票证
 
 ```
+---
+# 13.KMS
+* 项目地址：https://github.com/zbezj/HEU_KMS_Activator
+* 项目用处：激活 ms 各项软件
 
 
 
