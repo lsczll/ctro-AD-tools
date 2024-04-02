@@ -240,7 +240,7 @@ Rubeus.exe dump /luid:0x7049f /service:krbtgt
 * 项目用处：激活 ms 各项软件
 
 ---
-# 14.close.txt
+# 14.close-df.txt
 * 项目用处：ps 命令关闭win 所有防御措施，实时防护需要组策略关闭，否则为临时关闭状态
 ```
 # 禁用 Windows Defender 实时保护
