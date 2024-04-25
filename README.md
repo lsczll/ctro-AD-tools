@@ -316,8 +316,8 @@ crackmapexec smb target_ip -u username -H NTLM_hash -x 'whoami'
 ```
 ---
 # 16.kerberoast
-项目地址：https://github.com/nidem/kerberoast
-项目用处：主要用于kerberoast攻击
+* 项目地址：https://github.com/nidem/kerberoast
+* 项目用处：主要用于kerberoast攻击
 
 
 
