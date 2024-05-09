@@ -318,6 +318,20 @@ crackmapexec smb target_ip -u username -H NTLM_hash -x 'whoami'
 # 16.kerberoast
 * 项目地址：https://github.com/nidem/kerberoast
 * 项目用处：主要用于kerberoast攻击
+---
+# 17.ADSearch
+* 项目地址：https://github.com/tomcarver16/ADSearch
+* 项目用处：ad信息收集常用工具
+已直接构建成exe
+---
+# 18.Defender Control
+* 项目地址：https://www.sordum.org/9480/defender-control-v2-1/
+* 项目用处：彻底关闭wd，不会自动重启wd相关防御组件
+* 使用方式
+```
+1.先用Defender_Settings关闭实时防护和防篡改保护
+2.启动程序，关闭df
+```
 
 
 
