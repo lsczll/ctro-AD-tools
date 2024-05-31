@@ -332,8 +332,11 @@ crackmapexec smb target_ip -u username -H NTLM_hash -x 'whoami'
 1.先用Defender_Settings关闭实时防护和防篡改保护
 2.启动程序，关闭df
 ```
-
-
+# 19.adfind
+* 项目用处：ad的信息收集工具
+# 20.linWinPwn
+* 项目用处：使用 Linux 进行 Active Directory 渗透测试的瑞士军刀
+* 项目地址：https://github.com/lefayjey/linWinPwn
 
 
 
